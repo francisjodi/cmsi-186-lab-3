@@ -1,10 +1,14 @@
-/**
- * A dice set holds a collection of Die objects. All of the die objects have
- * the same number of sides.
- */
+import java.util.Arrays;
+import java.util.List;
+import java.util.Collections;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
 public class DiceSet {
 
-    // TODO add fields
+    private Die[] dice;
+
 
     /**
      * Creates a DiceSet containing the given number of dice, each with the
@@ -13,7 +17,10 @@ public class DiceSet {
      * or if it is asked to make dice with less than 4 sides.
      */
     public DiceSet(int sidesOnEachDie, int numberOfDice) {
-        // TODO
+      if (sidesOnEachDie < 4){
+        throw new IllegalArgumentException("Dice must have at least four sides")
+
+      }
     }
 
     /**
