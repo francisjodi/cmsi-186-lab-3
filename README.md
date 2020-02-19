@@ -1,7 +1,5 @@
 # CMSI 186 Lab 3 High Roller Starter Code
 
-This repository contains some unfinished Java programs that you are complete.
+CMSI-186-LAB 3
 
-Import this repository into a new repository of your own and write the code according to the lab [instructions](https://cs.lmu.edu/~ray/classes/plab/lab/3/). Use the provided test scripts.
-
-In your new repository, don’t forget to edit this README file, as _your_ repository will certainly not contain any unfinished Java programs.
+You’ve become really good at video games but have started to wonder what games were like before Pong. Did people play games on...the...command line? What was it like to play a game just with text? You decide to try writing such a game in Java, complete with old-fashioned text menus and words you type in to make things happen. And what a great idea this is! You get to practice with Java classes.
