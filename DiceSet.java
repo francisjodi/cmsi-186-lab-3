@@ -9,17 +9,16 @@ public class DiceSet {
 
     private Die[] dice;
 
-
-    /**
-     * Creates a DiceSet containing the given number of dice, each with the
-     * given number of sides. All die values start off as 1. Throws an
-     * IllegalArgumentException if either less than two dice were provided
-     * or if it is asked to make dice with less than 4 sides.
-     */
     public DiceSet(int sidesOnEachDie, int numberOfDice) {
+      if (numberOfDice < 2 ){
+        throw new IllegalArgumentException("At least two Dice are required");
+      }
       if (sidesOnEachDie < 4){
-        throw new IllegalArgumentException("Dice must have at least four sides")
-
+        throw new IllegalArgumentException("Dice must have at least four sides");
+      }
+      this.dice  = new Die[numberOfDice];
+      for (var i = 0; i < dice.length; i++){
+          this.dice[i] = new Die(sidesOnEachDie, 1);
       }
     }
 
@@ -36,14 +35,16 @@ public class DiceSet {
      * five dice of 20 sides each; or "2d6" for a set of two six-sided dice.
      */
     public String descriptor() {
-        // TODO
+        return "";
+
     }
 
     /**
      * Returns the sum of the values of each die in the set.
      */
     public int sum() {
-        // TODO
+        return 0;
+
     }
 
     /**
@@ -64,14 +65,16 @@ public class DiceSet {
      * Returns the value of the ith die.
      */
     public int getIndividual(int i) {
-        // TODO
+        return 0;
+
     }
 
     /**
      * Returns the values of each of the dice in a list.
      */
     public List<Integer> values() {
-        // TODO
+        return List.of();
+
     }
 
     /**
@@ -81,7 +84,8 @@ public class DiceSet {
      * number of each value in each set.
      */
     public boolean isIdenticalTo(DiceSet diceSet) {
-        // TODO
+      return false;
+
     }
 
     /**
@@ -89,6 +93,7 @@ public class DiceSet {
      * joined without a separator, for example: "[2][5][2][3]".
      */
     @Override public String toString() {
-        // TODO
+      return "";
+
     }
 }
