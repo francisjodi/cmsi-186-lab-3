@@ -31,7 +31,8 @@ public class HighRollerGame {
                     }
 
                     diceSet.rollAll();
-                    =Math .mac
+                    highest = Math.max(highest, diceSet.sum());
+                    System.out.println(diceSet);
                     // TODO: Roll all, sum them up, and update the highest score so far
                     // if necessary, and then print out the dice set
                 } else if (command.matches("roll\\s+\\d+")) {
@@ -44,10 +45,11 @@ public class HighRollerGame {
 
                 } else if (command.matches("high(est)?")) {
                     if (highest == 0) {
-
+                        System.out.println("No highest score yet.");
                         // TODO: Print that there is no highest score yet
 
                     } else {
+                        System.out.println(highest);
                         // TODO: Print the highest score so far
 
                     }
@@ -62,6 +64,12 @@ public class HighRollerGame {
     }
 
     private static void showHelp() {
-        // TODO: Add lines to print out the help menu as shown on the lab instructions
+      System.out.println("Enter 'h or help': Prints all commands and what they do.");
+     System.out.println("Enter 'q or quit': Quits the program.");
+     System.out.println("Enter 'use <s><n>': Rolls a dice set of n number of dice and s sides on each die.");
+     System.out.println("Enter 'high or highest': Prints the current high score.");
+     System.out.println("Enter 'roll all': Rolls all dice in the current set.");
+     System.out.println("Enter 'roll <i>': Rolls the ith die in the set.");
+
     }
 }
