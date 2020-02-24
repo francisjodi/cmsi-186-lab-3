@@ -1,11 +1,6 @@
 import java.util.Random;
 
-/**
- * A simple class for representing die objects. A die has a given number of
- * sides (at least) four, set when the die is constructed and which can never
- * be changed. The die's value can be changed, but only by calling its roll()
- * method.
- */
+
 public class Die {
     private static Random random = new Random();
 
@@ -30,10 +25,6 @@ public class Die {
       this.value = value;
     }
 
-    /**
-     * Simulates a roll by randomly updating the value of this die. In addition to
-     * mutating the die's value, this method also returns the new updated value.
-     */
     public int roll() {
     value=random.nextInt(sides)+1;
     return value;

@@ -33,8 +33,7 @@ public class HighRollerGame {
                     diceSet.rollAll();
                     highest = Math.max(highest, diceSet.sum());
                     System.out.println(diceSet);
-                    // TODO: Roll all, sum them up, and update the highest score so far
-                    // if necessary, and then print out the dice set
+                
                 } else if (command.matches("roll\\s+\\d+")) {
                     if (diceSet == null) {
                         throw new IllegalStateException("You don't have any dice yet");
