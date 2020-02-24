@@ -46,11 +46,9 @@ public class HighRollerGame {
                 } else if (command.matches("high(est)?")) {
                     if (highest == 0) {
                         System.out.println("No highest score yet.");
-                        // TODO: Print that there is no highest score yet
 
                     } else {
                         System.out.println(highest);
-                        // TODO: Print the highest score so far
 
                     }
                 } else {
